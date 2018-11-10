@@ -19,6 +19,7 @@ class Multiple3n5: public MathObject {
 	private:
 		int size;
 		vector<int> results;
+		int sum;
 
 	public:
 		Multiple3n5(int nTotal) {
@@ -26,30 +27,26 @@ class Multiple3n5: public MathObject {
 				cout << "\tDEBUG: Called Multiple3n5::Multiple3n5(int)\n";
 			}
 			size = nTotal;
+			sum = 0;
 		}
 
 		// start the calculation
-		void findMultiples() {
-			if (DEBUG) {
-				cout << "\tDEBUG: Called Multiple3n5::start()\n";
-			}
+		void findAndSumMultiples() {
+			sum = 0;
+			if (DEBUG) cout << "\tDEBUG: Called Multiple3n5::start()\n";
+
 			for (int i = 1; i < size; i++) {
 
 				if ((i % 3) == 0) {
-					results.push_back(i);
+					sum += i;
 					if (DEBUG) cout << "found multiple of 3: " << i << "\n";
 				} else if ((i % 5) == 0) {
-					results.push_back(i);
+					sum += i;
 					if (DEBUG) cout << "found multiple of 5: " << i << "\n";
 				}
-			}
-		}
 
-		void sumMultiples() {
-			int sum = 0;
-			for (auto i = results.rbegin(); i != results.rend(); ++i)
-				sum += *i;
-			cout << "sum of the multiples of 3 and 5: " << sum << "\n";
+			}
+			cout << "The sum of the multiples of 3 and 5: " << sum << "\n";
 		}
 };
 

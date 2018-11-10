@@ -24,8 +24,7 @@ class MathObject {
 		virtual ~MathObject() {
 			// does nothing
 		}
-		virtual void findMultiples() = 0;
-		virtual void sumMultiples() = 0;
+		virtual void findAndSumMultiples() = 0;
 };
 
 

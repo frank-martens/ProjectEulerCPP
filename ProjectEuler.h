@@ -42,8 +42,7 @@ class ProjectEuler {
 				cout << "\tDEBUG: Called ProjectEuler::calculate()\n";
 				cout << "\tDEBUG: matObj :: " << &mathObj << "\n";
 			}
-			mathObj->findMultiples();
-			mathObj->sumMultiples();
+			mathObj->findAndSumMultiples();
 		}
 };
 
