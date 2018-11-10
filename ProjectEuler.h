@@ -10,9 +10,11 @@
 
 #include "Math/MathObject.h"
 #include "Math/Multiple3n5/Multiple3n5.h"
+#include "Math/Fibonacci/Fibonacci.h"
 #include "peDebug.h"
 
 #define MULT_3n5 1
+#define FIBSUMEVN 2
 
 class ProjectEuler {
 	private:
@@ -26,6 +28,16 @@ class ProjectEuler {
 				// Can add more cases as math functions are added...
 				case MULT_3n5:
 					mathObj = new Multiple3n5(1000);
+					break;
+
+				case FIBSUMEVN:
+					mathObj = new Fibonacci(4000000);
+					break;
+
+				default:
+					cout << "Please make a selection.\n";
+					exit(9);
+					break;
 			}
 			// Simple switch statement to determine selection
 			if (DEBUG) {
@@ -37,12 +49,8 @@ class ProjectEuler {
 			delete mathObj;
 		}
 
-		void calculate() {
-			if (DEBUG) {
-				cout << "\tDEBUG: Called ProjectEuler::calculate()\n";
-				cout << "\tDEBUG: matObj :: " << &mathObj << "\n";
-			}
-			mathObj->findAndSumMultiples();
+		void start() {
+			mathObj->doWork();
 		}
 };
 

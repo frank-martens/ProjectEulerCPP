@@ -16,13 +16,14 @@ int main() {
 	int nSelect;
 
 	cout << "Project Euler...\n\n";
-	cout << "Select from one of the following:\n";
-	cout << "1) Multiples of 3 & 5 below 1000\n\n";
+	cout << "Select from one of the following:\n\n";
+	cout << "1) Multiples of 3 & 5 below 1000\n";
+	cout << "2) Fibonacci #s below 4,000,000\n\n";
 
 	cout << "Enter Value: ";
 	cin >> nSelect;
 
 	ProjectEuler projectEuler(nSelect);
-	projectEuler.calculate();
+	projectEuler.start();
 }
 

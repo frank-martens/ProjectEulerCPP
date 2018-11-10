@@ -18,7 +18,6 @@ using namespace std;
 class Multiple3n5: public MathObject {
 	private:
 		int size;
-		vector<int> results;
 		int sum;
 
 	public:
@@ -31,7 +30,7 @@ class Multiple3n5: public MathObject {
 		}
 
 		// start the calculation
-		void findAndSumMultiples() {
+		void doWork() {
 			sum = 0;
 			if (DEBUG) cout << "\tDEBUG: Called Multiple3n5::start()\n";
 
