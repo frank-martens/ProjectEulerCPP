@@ -10,8 +10,8 @@
 
 #include <iostream>
 #include <vector>
-#include "../MathObject.h"
-#include "../../peDebug.h"
+#include "./MathObject.h"
+#include "../peDebug.h"
 
 using namespace std;
 

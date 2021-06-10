@@ -9,12 +9,14 @@
 #define PROJECTEULER_H_
 
 #include "Math/MathObject.h"
-#include "Math/Multiple3n5/Multiple3n5.h"
-#include "Math/Fibonacci/Fibonacci.h"
+#include "Math/Multiple3n5.h"
+#include "Math/Fibonacci.h"
+#include "Math/LPF.h"
 #include "peDebug.h"
 
 #define MULT_3n5 1
 #define FIBSUMEVN 2
+#define LPF 3
 
 class ProjectEuler {
 	private:
@@ -32,6 +34,10 @@ class ProjectEuler {
 
 				case FIBSUMEVN:
 					mathObj = new Fibonacci(4000000);
+					break;
+
+				case LPF:
+					mathObj = new LargestPrimeFactor(600851475143);
 					break;
 
 				default:
